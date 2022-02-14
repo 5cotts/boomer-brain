@@ -1,17 +1,11 @@
 <!DOCTYPE html>
     <head>
-        <style>
-            .centered-img {
-                width: 1000px;
-                height: 1000px;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        </style>
-        <script>
-            const path = "2022_01_15_First_Design";
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+    </head>
+    <script src="scripts/main.js"></script>
+    <script>
+            const path = "assets/2022_01_15_First_Design";
             const images = [
                 path + "/20_20_vision.png",
                 path + "/bloated.png",
@@ -20,23 +14,11 @@
                 path + "/swirly.png",
             ];
             const email = "is_this_thing_on@boomerbrain.org";
+            
+            let imgHtml = randomImgFromArray(images);
+            let clickableImg = makeObjClickable(imgHtml, '/welcome.html');
 
-            function randomImgFromArray(arr) {
-                var num = Math.floor( Math.random() * arr.length );
-                var img = arr[ num ];
-                var imgStr = `<img src="${img}" alt="${img}" class="centered-img">`;
-                return imgStr
-            }
-
-            function footer(contactEmail) {
-                var emailStr = `<a href="mailto:${contactEmail}" style="text-align: left">${contactEmail}</a>`
-                return emailStr
-            }
-
-            document.write(`<div>${randomImgFromArray(images)}</div>`);
-            // TODO: Email to come. Need to set up DNS.
-            // document.write(`<div>${footer(email)}</div>`);
+            document.write(`<div>${clickableImg}</div>`);
             document.close();
         </script>
-    </head>
 </html>
