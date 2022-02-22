@@ -13,3 +13,13 @@ center {
     left: 50%;
     transform: translate(-50%, -50%); 
 }
+
+.lower-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin-top: 350px;
+}
+
+.selector { cursor: pointer; }
