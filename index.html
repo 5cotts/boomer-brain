@@ -4,21 +4,12 @@
         <meta charset="UTF-8">
     </head>
     <script src="scripts/main.js"></script>
-    <script>
-            const path = "assets/2022_01_15_First_Design";
-            const images = [
-                path + "/20_20_vision.png",
-                path + "/bloated.png",
-                path + "/og_text.png",
-                path + "/spotlight.png",
-                path + "/swirly.png",
-            ];
-            const email = "is_this_thing_on@boomerbrain.org";
-            
-            let imgHtml = randomImgFromArray(images);
-            let clickableImg = makeObjClickable(imgHtml, '/welcome.html');
-
-            document.write(`<div>${clickableImg}</div>`);
-            document.close();
-        </script>
+    <div class="container">
+        <div id="slideshow">
+            <img class="centered-img selector" alt="slideshow" id="imgClickAndChange" src="assets/2022_01_15_First_Design/20_20_vision.png" onclick="changeImage()">
+        </div>
+    </div>
+    <div class="lower-center">
+        <a href="welcome.html"><button>Enter</button></a>
+    </div>
 </html>
